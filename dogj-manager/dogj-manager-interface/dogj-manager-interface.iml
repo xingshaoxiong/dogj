@@ -12,6 +12,6 @@
     <orderEntry type="jdk" jdkName="1.8" jdkType="JavaSDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="dogj-manager-pojo" />
-    <orderEntry type="library" name="Maven: com.dogj:dogj-parent:1.0-SNAPSHOT" level="project" />
+    <orderEntry type="module" module-name="dogj-parent" />
   </component>
 </module>
