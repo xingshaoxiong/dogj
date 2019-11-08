@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/dogj.iml" filepath="$PROJECT_DIR$/.idea/dogj.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dogj-common/dogj-common.iml" filepath="$PROJECT_DIR$/dogj-common/dogj-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dogj-manager/dogj-manager.iml" filepath="$PROJECT_DIR$/dogj-manager/dogj-manager.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dogj-manager/dogj-manager-dao/dogj-manager-dao.iml" filepath="$PROJECT_DIR$/dogj-manager/dogj-manager-dao/dogj-manager-dao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dogj-manager/dogj-manager-interface/dogj-manager-interface.iml" filepath="$PROJECT_DIR$/dogj-manager/dogj-manager-interface/dogj-manager-interface.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dogj-manager/dogj-manager-pojo/dogj-manager-pojo.iml" filepath="$PROJECT_DIR$/dogj-manager/dogj-manager-pojo/dogj-manager-pojo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dogj-manager/dogj-manager-service/dogj-manager-service.iml" filepath="$PROJECT_DIR$/dogj-manager/dogj-manager-service/dogj-manager-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dogj-manager/dogj-manager-web/dogj-manager-web.iml" filepath="$PROJECT_DIR$/dogj-manager/dogj-manager-web/dogj-manager-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dogj-parent/dogj-parent.iml" filepath="$PROJECT_DIR$/dogj-parent/dogj-parent.iml" />
+    </modules>
+  </component>
+</project>

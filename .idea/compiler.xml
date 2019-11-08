@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="dogj-common" />
+        <module name="dogj-manager-dao" />
+        <module name="dogj-manager-interface" />
+        <module name="dogj-manager-service" />
+        <module name="dogj-manager-web" />
+        <module name="dogj-manager-pojo" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="dogj-common" target="1.8" />
+      <module name="dogj-manager" target="1.8" />
+      <module name="dogj-manager-dao" target="1.8" />
+      <module name="dogj-manager-interface" target="1.8" />
+      <module name="dogj-manager-pojo" target="1.8" />
+      <module name="dogj-manager-service" target="1.8" />
+      <module name="dogj-manager-web" target="1.8" />
+      <module name="dogj-parent" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
