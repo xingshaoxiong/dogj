@@ -1,6 +1,6 @@
 <component name="ArtifactManager">
   <artifact type="exploded-war" name="dogj-manager-web:war exploded">
-    <output-path>$PROJECT_DIR$/dogj-manager/dogj-manager-web/target/dogj-manager-web</output-path>
+    <output-path>$PROJECT_DIR$/dogj-manager-web/target/dogj-manager-web</output-path>
     <properties id="maven-jee-properties">
       <options>
         <exploded>true</exploded>
@@ -64,15 +64,11 @@
           <element id="library" level="project" name="Maven: org.apache.yetus:audience-annotations:0.5.0" />
           <element id="library" level="project" name="Maven: io.netty:netty:3.10.6.Final" />
           <element id="library" level="project" name="Maven: com.github.sgroschupf:zkclient:0.1" />
-          <element id="library" level="project" name="Maven: fastdfs_client:fastdfs_client:1.25" />
           <element id="library" level="project" name="Maven: commons-fileupload:commons-fileupload:1.3.3" />
-          <element id="archive" name="dogj-parent-1.0-SNAPSHOT.jar">
-            <element id="module-output" name="dogj-parent" />
-          </element>
         </element>
       </element>
       <element id="directory" name="META-INF">
-        <element id="file-copy" path="$PROJECT_DIR$/dogj-manager/dogj-manager-web/target/dogj-manager-web/META-INF/MANIFEST.MF" />
+        <element id="file-copy" path="$PROJECT_DIR$/dogj-manager-web/target/dogj-manager-web/META-INF/MANIFEST.MF" />
       </element>
       <element id="javaee-facet-resources" facet="dogj-manager-web/web/Web" />
     </root>

@@ -1,6 +1,6 @@
 <component name="ArtifactManager">
   <artifact type="war" name="dogj-manager-web:war">
-    <output-path>$PROJECT_DIR$/dogj-manager/dogj-manager-web/target</output-path>
+    <output-path>$PROJECT_DIR$/dogj-manager-web/target</output-path>
     <properties id="maven-jee-properties">
       <options>
         <module>dogj-manager-web</module>
