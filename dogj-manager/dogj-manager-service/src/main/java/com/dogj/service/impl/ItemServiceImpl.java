@@ -1,14 +1,11 @@
 package com.dogj.service.impl;
 
-import com.alibaba.dubbo.container.page.PageHandler;
 import com.dogj.common.pojo.DogjResult;
 import com.dogj.common.utils.IDUtil;
-import com.dogj.dao.DogjItemCatDao;
 import com.dogj.dao.DogjItemDao;
 import com.dogj.dao.DogjItemDescDao;
 import com.dogj.pojo.DogjItem;
 import com.dogj.pojo.DogjItemDesc;
-import com.dogj.pojo.DogjItemParamQuery;
 import com.dogj.pojo.DogjItemQuery;
 import com.dogj.service.ItemService;
 import com.github.pagehelper.PageHelper;
@@ -34,12 +31,12 @@ public class ItemServiceImpl implements ItemService {
     }
 
     @Override
-    public List<DogjItem> getItemList(int page, int rows) {
+    public PageInfo<DogjItem> getItemList(int page, int rows) {
         PageHelper.startPage(page, rows);
         DogjItemQuery query = new DogjItemQuery();
         List<DogjItem> list = dogjItemDao.selectByExample(query);
-//        PageInfo<DogjItem> pageInfo = new PageInfo<>(list);
-        return list;
+        PageInfo<DogjItem> pageInfo = new PageInfo<>(list);
+        return pageInfo;
     }
 
     @Override
