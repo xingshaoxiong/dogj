@@ -4,9 +4,6 @@
 	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
 	id="WebApp_ID" version="2.5">
 	<display-name>dogj-manager-web</display-name>
-<!--	<welcome-file-list>-->
-<!--		<welcome-file>index.jsp</welcome-file>-->
-<!--	</welcome-file-list>-->
 	<!-- post乱码过滤器 -->
 	<filter>
 		<filter-name>CharacterEncodingFilter</filter-name>
@@ -33,8 +30,8 @@
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>dogj-manager-web</servlet-name>
-		<!-- 拦截所有请求jsp除外 -->
-		<url-pattern>/</url-pattern>
+		<!-- 这个项目不涉及到前端页面，全是post请求测试，所以拦截所有请求 -->
+		<url-pattern>/*</url-pattern>
 	</servlet-mapping>
 	
 </web-app>

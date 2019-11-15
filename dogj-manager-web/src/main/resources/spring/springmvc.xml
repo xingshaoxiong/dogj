@@ -26,18 +26,18 @@
 <!--	<mvc:resources location="/js/" mapping="/js/**"/>-->
 	<!-- 多媒体解析器 -->
 	<!-- 配置文件上传解析器 -->
-	<bean id="multipartResolver"
-		class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
-		<!-- 设定默认编码 -->
-		<property name="defaultEncoding" value="UTF-8"></property>
-		<!-- 设定文件上传的最大值5MB，5*1024*1024 -->
-		<property name="maxUploadSize" value="5242880"></property>
-	</bean>
+<!--	<bean id="multipartResolver"-->
+<!--		class="org.springframework.web.multipart.commons.CommonsMultipartResolver">-->
+<!--		&lt;!&ndash; 设定默认编码 &ndash;&gt;-->
+<!--		<property name="defaultEncoding" value="UTF-8"></property>-->
+<!--		&lt;!&ndash; 设定文件上传的最大值5MB，5*1024*1024 &ndash;&gt;-->
+<!--		<property name="maxUploadSize" value="5242880"></property>-->
+<!--	</bean>-->
 	<!-- 引用dubbo服务 -->
 	<dubbo:application name="dogj-manager-web"/>
 	<dubbo:registry protocol="zookeeper" address="47.101.34.126:2181"/>
 	<dubbo:reference interface="com.dogj.service.ItemService" id="itemService" />
-<!--	<dubbo:reference interface="com.dogj.service.ItemCatService" id="itemCatService" />-->
+	<dubbo:reference interface="com.dogj.service.ItemCatService" id="itemCatService" />
 <!--	<dubbo:reference interface="com.dogj.content.service.ContentCategoryService" id="contentCategoryService" />-->
 <!--	<dubbo:reference interface="com.dogj.content.service.ContentService" id="contentService" />-->
 </beans>
