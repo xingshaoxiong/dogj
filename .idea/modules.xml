@@ -11,6 +11,9 @@
       <module fileurl="file://$PROJECT_DIR$/dogj-manager/dogj-manager-service/dogj-manager-service.iml" filepath="$PROJECT_DIR$/dogj-manager/dogj-manager-service/dogj-manager-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/dogj-manager-web/dogj-manager-web.iml" filepath="$PROJECT_DIR$/dogj-manager-web/dogj-manager-web.iml" />
       <module fileurl="file://$PROJECT_DIR$/dogj-parent/dogj-parent.iml" filepath="$PROJECT_DIR$/dogj-parent/dogj-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dogj-sso/dogj-sso.iml" filepath="$PROJECT_DIR$/dogj-sso/dogj-sso.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dogj-sso/dogj-sso-interface/dogj-sso-interface.iml" filepath="$PROJECT_DIR$/dogj-sso/dogj-sso-interface/dogj-sso-interface.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dogj-sso/dogj-sso-service/dogj-sso-service.iml" filepath="$PROJECT_DIR$/dogj-sso/dogj-sso-service/dogj-sso-service.iml" />
     </modules>
   </component>
 </project>

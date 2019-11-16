@@ -3,15 +3,14 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>dogj-manager</artifactId>
+        <artifactId>dogj-sso</artifactId>
         <groupId>com.dogj</groupId>
         <version>1.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>dogj-manager-service</artifactId>
+    <artifactId>dogj-sso-service</artifactId>
     <packaging>war</packaging>
-
     <dependencies>
         <dependency>
             <groupId>com.dogj</groupId>
@@ -20,7 +19,7 @@
         </dependency>
         <dependency>
             <groupId>com.dogj</groupId>
-            <artifactId>dogj-manager-interface</artifactId>
+            <artifactId>dogj-sso-interface</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
         <!-- Spring -->
@@ -52,7 +51,7 @@
             <groupId>org.springframework</groupId>
             <artifactId>spring-context-support</artifactId>
         </dependency>
-        <!-- dubbo相关依赖 -->
+        <!-- dubbo相关的jar包 -->
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>dubbo</artifactId>
@@ -75,6 +74,12 @@
             <groupId>com.github.sgroschupf</groupId>
             <artifactId>zkclient</artifactId>
         </dependency>
+        <!-- Redis客户端 -->
+        <dependency>
+            <groupId>redis.clients</groupId>
+            <artifactId>jedis</artifactId>
+        </dependency>
     </dependencies>
+
 
 </project>

@@ -6,12 +6,14 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="dogj-manager-interface" />
+        <module name="dogj-sso-interface" />
+        <module name="dogj-sso-service" />
         <module name="dogj-common" />
         <module name="dogj-manager-dao" />
-        <module name="dogj-manager-interface" />
+        <module name="dogj-manager-pojo" />
         <module name="dogj-manager-service" />
         <module name="dogj-manager-web" />
-        <module name="dogj-manager-pojo" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -23,6 +25,9 @@
       <module name="dogj-manager-service" target="1.8" />
       <module name="dogj-manager-web" target="1.8" />
       <module name="dogj-parent" target="1.8" />
+      <module name="dogj-sso" target="1.8" />
+      <module name="dogj-sso-interface" target="1.8" />
+      <module name="dogj-sso-service" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
