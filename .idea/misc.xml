@@ -3,6 +3,7 @@
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$/dogj-manager-web" />
     <file type="web" url="file://$PROJECT_DIR$/dogj-manager/dogj-manager-service" />
+    <file type="web" url="file://$PROJECT_DIR$/dogj-sso-web" />
     <file type="web" url="file://$PROJECT_DIR$/dogj-sso/dogj-sso-service" />
   </component>
   <component name="JavaScriptSettings">
@@ -16,6 +17,7 @@
         <option value="$PROJECT_DIR$/dogj-manager/pom.xml" />
         <option value="$PROJECT_DIR$/dogj-manager-web/pom.xml" />
         <option value="$PROJECT_DIR$/dogj-sso/pom.xml" />
+        <option value="$PROJECT_DIR$/dogj-sso-web/pom.xml" />
       </list>
     </option>
   </component>

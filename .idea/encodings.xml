@@ -10,6 +10,7 @@
     <file url="file://$PROJECT_DIR$/dogj-manager/dogj-manager-service" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/dogj-parent" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/dogj-sso" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/dogj-sso-web" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/dogj-sso/dogj-sso-interface" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/dogj-sso/dogj-sso-service" charset="UTF-8" />
     <file url="PROJECT" charset="UTF-8" />
