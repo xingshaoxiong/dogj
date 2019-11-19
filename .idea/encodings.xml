@@ -8,6 +8,10 @@
     <file url="file://$PROJECT_DIR$/dogj-manager/dogj-manager-interface" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/dogj-manager/dogj-manager-pojo" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/dogj-manager/dogj-manager-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/dogj-order" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/dogj-order-web" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/dogj-order/dogj-order-interface" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/dogj-order/dogj-order-service" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/dogj-parent" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/dogj-sso" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/dogj-sso-web" charset="UTF-8" />
