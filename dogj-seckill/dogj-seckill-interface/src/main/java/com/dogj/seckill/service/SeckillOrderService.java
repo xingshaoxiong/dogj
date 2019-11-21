@@ -10,8 +10,9 @@ public interface SeckillOrderService {
     DogjSeckillOrder getSeckillOrderById(Long id);
     DogjResult addSeckillOrder(DogjSeckillOrder goods);
     DogjResult updateSeckillOrder(DogjSeckillOrder goods);
-    DogjResult deleteSeckillOrder(DogjSeckillOrder goods);
-    DogjSeckillOrder getOrderFromRedis(Long id);
+    DogjResult deleteSeckillOrder(Long id);
+    DogjResult submitOrder(Long seckillId, Long userId);
+    DogjSeckillOrder getOrderFromRedisByUserId(Long userId);
     DogjResult saveOrderFromRedisToDb(String userId, Long orderId);
     DogjResult deleteOrderFromRedis(String userId, Long orderId);
 }

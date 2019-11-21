@@ -1,6 +1,7 @@
 package com.dogj.jedis;
 
 import java.util.List;
+import java.util.Set;
 
 public class JedisClientCluster implements JedisClient {
     @Override
@@ -50,6 +51,16 @@ public class JedisClientCluster implements JedisClient {
 
     @Override
     public List<String> hgetAll(String key) {
+        return null;
+    }
+
+    @Override
+    public Set<String> getKeys(String pattern) {
+        return null;
+    }
+
+    @Override
+    public Long decr(String key) {
         return null;
     }
 }

@@ -5,6 +5,7 @@ import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisPool;
 
 import java.util.List;
+import java.util.Set;
 
 public class JedisClientPool implements JedisClient {
 
@@ -88,5 +89,21 @@ public class JedisClientPool implements JedisClient {
         List<String> list = jedis.hvals(key);
         jedis.close();
         return list;
+    }
+
+    @Override
+    public Set<String> getKeys(String pattern) {
+        Jedis jedis = jedisPool.getResource();
+        Set<String> set = jedis.keys(pattern);
+        jedis.close();
+        return set;
+    }
+
+    @Override
+    public Long decr(String key) {
+        Jedis jedis = jedisPool.getResource();
+        Long value = jedis.decr(key);
+        jedis.close();
+        return value;
     }
 }

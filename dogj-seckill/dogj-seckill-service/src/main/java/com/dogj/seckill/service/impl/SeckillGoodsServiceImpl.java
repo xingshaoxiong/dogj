@@ -13,6 +13,7 @@ import org.springframework.beans.factory.annotation.Value;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.Set;
 
 public class SeckillGoodsServiceImpl implements SeckillGoodsService {
 
@@ -22,8 +23,8 @@ public class SeckillGoodsServiceImpl implements SeckillGoodsService {
     @Autowired
     private JedisClient jedisClient;
 
-    @Value("${SECKILL_SESSION}")
-    private String SECKILL_SESSION;
+    @Value("${SECKILL_GOODS_SESSION}")
+    private String SECKILL_GOODS_SESSION;
 
     @Override
     public List<DogjSeckillGoods> getSeckillGoodsList() {
@@ -56,26 +57,31 @@ public class SeckillGoodsServiceImpl implements SeckillGoodsService {
 
     @Override
     public DogjSeckillGoods getGoodsFromRedis(Long id) {
-        return JsonUtil.jsonToPojo(jedisClient.hget(SECKILL_SESSION + ":seckillGoods", id.toString()), DogjSeckillGoods.class);
+        DogjSeckillGoods goods = getSeckillGoodsById(id);
+        goods.setStockCount(Integer.valueOf(jedisClient.get(id.toString())));
+        return goods;
     }
 
     @Override
     public List<DogjSeckillGoods> getGoodsListFromRedis() {
+        Set<String> keySet = jedisClient.getKeys(SECKILL_GOODS_SESSION + "*");
         List<DogjSeckillGoods> list = new ArrayList<>();
-        if (!jedisClient.exists(SECKILL_SESSION + ":" + "seckillGoods")) {
+        if (keySet.isEmpty()) {
             DogjSeckillGoodsQuery query = new DogjSeckillGoodsQuery();
             DogjSeckillGoodsQuery.Criteria criteria = query.createCriteria();
-            criteria.andStockCountGreaterThan(0);
+            criteria.andStockCountGreaterThan(-1);
             criteria.andStartTimeLessThanOrEqualTo(new Date());
             criteria.andEndTimeGreaterThanOrEqualTo(new Date());
             list = seckillGoodsDao.selectByExample(query);
             for (DogjSeckillGoods goods : list) {
-                jedisClient.hset(SECKILL_SESSION + ":seckillGoods", goods.getId().toString(), JsonUtil.objectToJson(goods));
+                jedisClient.set(SECKILL_GOODS_SESSION + ":" + goods.getId().toString(), goods.getStockCount().toString());
             }
         } else {
-            List<String> redisList = jedisClient.hgetAll(SECKILL_SESSION + ":seckillGoods");
-            for (String s : redisList) {
-                list.add(JsonUtil.jsonToPojo(s, DogjSeckillGoods.class));
+            for (String id : keySet) {
+                DogjSeckillGoods goods = getGoodsFromRedis(Long.parseLong(id));
+                if (goods.getStockCount() > 0) {
+                    list.add(goods);
+                }
             }
         }
         return list;

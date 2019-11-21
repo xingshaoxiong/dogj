@@ -1,6 +1,7 @@
 package com.dogj.jedis;
 
 import java.util.List;
+import java.util.Set;
 
 public interface JedisClient {
     String set(String key, String value);
@@ -13,4 +14,6 @@ public interface JedisClient {
     String hget(String key, String filed);
     Long hdel(String key, String... filed);
     List<String> hgetAll(String key);
+    Set<String> getKeys(String pattern);
+    Long decr(String key);
 }
