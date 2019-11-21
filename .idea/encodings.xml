@@ -13,6 +13,10 @@
     <file url="file://$PROJECT_DIR$/dogj-order/dogj-order-interface" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/dogj-order/dogj-order-service" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/dogj-parent" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/dogj-sec-kill" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/dogj-seckill" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/dogj-seckill/dogj-seckill-interface" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/dogj-seckill/dogj-seckill-service" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/dogj-sso" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/dogj-sso-web" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/dogj-sso/dogj-sso-interface" charset="UTF-8" />

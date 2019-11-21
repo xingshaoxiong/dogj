@@ -6,18 +6,20 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="dogj-order-service" />
         <module name="dogj-order-interface" />
+        <module name="dogj-seckill-interface" />
+        <module name="dogj-manager-web" />
+        <module name="dogj-sso-web" />
         <module name="dogj-manager-pojo" />
         <module name="dogj-sso-service" />
-        <module name="dogj-manager-service" />
-        <module name="dogj-manager-dao" />
+        <module name="dogj-seckill-service" />
         <module name="dogj-order-web" />
-        <module name="dogj-sso-web" />
-        <module name="dogj-manager-interface" />
-        <module name="dogj-sso-interface" />
-        <module name="dogj-manager-web" />
+        <module name="dogj-manager-dao" />
         <module name="dogj-common" />
+        <module name="dogj-manager-service" />
+        <module name="dogj-order-service" />
+        <module name="dogj-sso-interface" />
+        <module name="dogj-manager-interface" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -33,6 +35,10 @@
       <module name="dogj-order-service" target="1.8" />
       <module name="dogj-order-web" target="1.8" />
       <module name="dogj-parent" target="1.8" />
+      <module name="dogj-sec-kill" target="1.8" />
+      <module name="dogj-seckill" target="1.8" />
+      <module name="dogj-seckill-interface" target="1.8" />
+      <module name="dogj-seckill-service" target="1.8" />
       <module name="dogj-sso" target="1.8" />
       <module name="dogj-sso-interface" target="1.8" />
       <module name="dogj-sso-service" target="1.8" />

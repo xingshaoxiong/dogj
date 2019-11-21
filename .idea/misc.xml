@@ -5,6 +5,7 @@
     <file type="web" url="file://$PROJECT_DIR$/dogj-manager/dogj-manager-service" />
     <file type="web" url="file://$PROJECT_DIR$/dogj-order-web" />
     <file type="web" url="file://$PROJECT_DIR$/dogj-order/dogj-order-service" />
+    <file type="web" url="file://$PROJECT_DIR$/dogj-seckill/dogj-seckill-service" />
     <file type="web" url="file://$PROJECT_DIR$/dogj-sso-web" />
     <file type="web" url="file://$PROJECT_DIR$/dogj-sso/dogj-sso-service" />
   </component>
@@ -22,6 +23,7 @@
         <option value="$PROJECT_DIR$/dogj-sso-web/pom.xml" />
         <option value="$PROJECT_DIR$/dogj-order/pom.xml" />
         <option value="$PROJECT_DIR$/dogj-order-web/pom.xml" />
+        <option value="$PROJECT_DIR$/dogj-seckill/pom.xml" />
       </list>
     </option>
   </component>
