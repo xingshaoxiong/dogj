@@ -7,3 +7,11 @@
 
 # ignore Maven generated target folders
 target
+
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
