@@ -3,6 +3,7 @@ package com.dogj.search;
 import com.dogj.pojo.DogjItem;
 import com.dogj.search.bean.SearchItem;
 import com.dogj.search.mapper.SearchItemMapper;
+import com.dogj.search.repository.SearchItemRepository;
 import com.dogj.service.ItemService;
 import org.apache.dubbo.config.annotation.Reference;
 import org.junit.Test;
@@ -21,8 +22,8 @@ public class DogjSearchApplicationTests {
     private ItemService itemService;
     @Autowired
     private SearchItemMapper searchItemMapper;
-//    @Autowired
-//    private SearchItemRepository searchItemRepository;
+    @Autowired
+    private SearchItemRepository searchItemRepository;
     @Test
     public void contextLoads() {
         DogjItem item = itemService.getItemById(562379);
@@ -45,5 +46,16 @@ public class DogjSearchApplicationTests {
 //            System.out.println(searchItem.getId());
 //        }
 //    }
+
+    @Test
+    public void rabbitmqTest() {
+        DogjItem item = new DogjItem();
+        item.setTitle("华为手机");
+        item.setPrice(999L);
+        item.setNum(10);
+        item.setSellPoint("牢厂254");
+        item.setCid(10L);
+        itemService.addItem(item, "testRabbitMq");
+    }
 
 }

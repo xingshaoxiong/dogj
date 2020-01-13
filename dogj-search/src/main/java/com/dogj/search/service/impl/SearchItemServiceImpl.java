@@ -5,8 +5,7 @@ import com.dogj.search.bean.SearchItem;
 import com.dogj.search.mapper.SearchItemMapper;
 import com.dogj.search.repository.SearchItemRepository;
 import com.dogj.search.service.SearchItemService;
-import com.dogj.service.ItemService;
-import org.apache.dubbo.config.annotation.Reference;
+import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -14,8 +13,8 @@ import java.util.List;
 
 @Service
 public class SearchItemServiceImpl implements SearchItemService {
-    @Reference
-    private ItemService itemService;
+//    @Reference
+//    private ItemService itemService;
 
     @Autowired
     private SearchItemMapper searchItemMapper;
@@ -30,5 +29,13 @@ public class SearchItemServiceImpl implements SearchItemService {
             searchItemRepository.index(searchItem);
         }
         return DogjResult.ok();
+    }
+
+    @RabbitListener(queues = "com.dogj.itemAdd")
+    public void receiveAddToES(String id) {
+        Long itemId = Long.parseLong(id);
+        SearchItem item = searchItemMapper.getItemById(itemId);
+        searchItemRepository.index(item);
+        return;
     }
 }

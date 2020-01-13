@@ -10,9 +10,16 @@
 	
 	<context:annotation-config/>
 	<!-- redis单机版 -->
+	<bean id="jedisPoolConfig" class="redis.clients.jedis.JedisPoolConfig">
+		<property name="testOnBorrow" value="true"/>
+		<property name="testOnReturn" value="true"/>
+	</bean>
 	<bean id="jedisPool" class="redis.clients.jedis.JedisPool">
+        <constructor-arg name="poolConfig" ref="jedisPoolConfig"/>
 		<constructor-arg name="host" value="47.101.34.126"/>
-		<constructor-arg name="port" value="6379"/>	
+		<constructor-arg name="port" value="8737"/>
+		<constructor-arg name="timeout" value="2000" type="int"/>
+		<constructor-arg name="password" value="8737"/>
 	</bean>
 	<bean id="jedisClientPool" class="com.dogj.jedis.JedisClientPool"/>
 	<!-- redis集群 -->

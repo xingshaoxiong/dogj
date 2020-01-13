@@ -10,6 +10,9 @@ import com.dogj.pojo.DogjItemQuery;
 import com.dogj.service.ItemService;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
+import org.springframework.amqp.core.Message;
+import org.springframework.amqp.core.MessageProperties;
+import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -23,6 +26,8 @@ public class ItemServiceImpl implements ItemService {
     private DogjItemDao dogjItemDao;
     @Autowired
     private DogjItemDescDao dogjItemDescDao;
+    @Autowired
+    private RabbitTemplate rabbitTemplate;
 
     @Override
     public DogjItem getItemById(long itemId) {
@@ -53,6 +58,8 @@ public class ItemServiceImpl implements ItemService {
         itemDesc.setUpdated(new Date());
         itemDesc.setCreated(new Date());
         dogjItemDescDao.insert(itemDesc);
+        Message msg = new Message(item.getId().toString().getBytes(), new MessageProperties());
+        rabbitTemplate.convertAndSend("com.dogj.itemAdd",msg);
         return DogjResult.ok();
     }
 }
